@@ -1,5 +1,7 @@
 import _ from 'lodash';
-import './style.css'
+import './style.css';
+import Icon from './abacus.png';
+
 // import myName from './myName'
 
 function component() {
@@ -8,6 +10,11 @@ function component() {
     // Lodash, now imported by this script
     element.innerHTML = _.join(['Hello', 'webpack'], ' ');
     element.classList.add('hello')
+
+    const abacusIcon = new Image()
+    abacusIcon.src = Icon
+
+    element.append(abacusIcon)
   
     return element;
   }
