@@ -1,25 +1,17 @@
 import _ from 'lodash';
-import './style.css';
-import Icon from './abacus.png';
-import Data from './book-list.xml';
-import Notes from './addresses.csv';
-
-// import myName from './myName'
+import printMe from './print.js';
 
 function component() {
     const element = document.createElement('div');
+    const btn = document.createElement('button')
 
     // Lodash, now imported by this script
     element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-    element.classList.add('hello')
 
-    const abacusIcon = new Image()
-    abacusIcon.src = Icon
+    btn.innerHTML = 'Click me and check the console!'
+    btn.onclick = printMe;
 
-    element.append(abacusIcon)
-
-    console.log(Data)
-    console.log(Notes)
+    element.appendChild(btn)
   
     return element;
   }
