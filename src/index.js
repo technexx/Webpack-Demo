@@ -1,6 +1,8 @@
 import _ from 'lodash';
 import './style.css';
 import Icon from './abacus.png';
+import Data from './book-list.xml';
+import Notes from './addresses.csv';
 
 // import myName from './myName'
 
@@ -15,6 +17,9 @@ function component() {
     abacusIcon.src = Icon
 
     element.append(abacusIcon)
+
+    console.log(Data)
+    console.log(Notes)
   
     return element;
   }
